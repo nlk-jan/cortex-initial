@@ -1,0 +1,56 @@
+$color_1: #F5F8FF;
+$font-family_1: 'Roboto';
+$background-color_1: transparent;
+
+.commentbox-main {
+	display: block;
+	width: 96%;
+	margin: 0 auto;
+	background: #133774;
+	border-radius: 8px;
+	padding: 8px;
+	textarea {
+		display: block;
+		width: 100%;
+		resize: none;
+		background-color: $background-color_1;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid #76A9FF;
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		color: $color_1;
+		padding-top: 100px;
+		padding-bottom: 5px;
+	}
+	.commennt-actions {
+		justify-content: space-between;
+		padding: 10px 0;
+		div {
+			&:first-child {
+				.btnImg {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	.btnImg {
+		display: inline-flex;
+		background: none;
+		outline: none;
+		border: none;
+		align-items: center;
+		cursor: pointer;
+		img {
+			max-width: 35px;
+		}
+	}
+}
+.d-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}

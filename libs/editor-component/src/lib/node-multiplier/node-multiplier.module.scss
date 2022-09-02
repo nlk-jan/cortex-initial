@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../../assets/fonts/Roboto-Regular.ttf');
+}
+
+$font-family_1: 'Roboto Condensed';
+$font-family_2: 'Roboto-Regular';
+$background-color_1: #0C2146;
+$color_1: #76A9FF;
+$color_2: #F5F8FF;
+
+
+.nodeMultiplier-main {
+	.main-container {
+		max-width: 400px;
+		padding: 12px;
+		margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+	}
+	.box-main {
+		border: 1px solid #1B4EA3;
+		padding: 15px 15px 5px;
+		border-radius: 10px;
+		position: relative;
+	}
+	.component-heading {
+		margin: 0;
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: -13px;
+		left: 10px;
+		background-color: $background-color_1;
+		padding: 0 5px;
+        color: $color_1;
+	}
+    .nodeinnerPara{
+        font-family: 'Roboto-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        color: $color_2;
+        margin: 0;
+    }
+}
+.nodeMultiplier-main {
+	.nodeMultiplier-list {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.multiplier-List {
+				display: flex;
+				flex-direction: row;
+				width: 50%;
+				align-items: center;
+				font-family: $font-family_2;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 14px;
+                color: $color_1;
+			}
+			span {
+				margin-left: 10px;
+			}
+		}
+	}
+}

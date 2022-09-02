@@ -1,0 +1,72 @@
+$color_1: #F5F8FF;
+$color_2: #fff;
+$font-family_1: 'Ubuntu Mono Bold';
+$font-family_2: 'Roboto';
+
+.nodeBox {
+	.main-container {
+		max-width: 400px;
+		padding: 12px 0;
+		margin: 0 auto;
+	}
+	.box-main {
+		padding: 20px 0;
+		border: 1px solid #1B4EA3;
+		padding: 15px 15px 5px;
+		border-radius: 10px;
+		position: relative;
+	}
+}
+.nodeAttributes-main {
+	.box-main {
+		border: none;
+		border-top: 1px solid;
+		border-radius: 0;
+	}
+	.nodeAttribute-heading {
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 16px;
+		color: $color_1;
+		margin: 0;
+	}
+	.nodeAttr-list {
+		padding: 10px 0;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			li {
+				display: flex;
+				flex-direction: row;
+				width: 50%;
+				align-items: center;
+				font-family: $font-family_2;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 14px;
+				margin: 10px 0;
+				img {
+					margin-right: 10px;
+				}
+				&:nth-child(even) {
+					color: $color_2;
+					font-size: 16px;
+					line-height: 19px;
+				}
+			}
+			li.addNewAttr {
+				display: block;
+				width: 100%;
+				color: $color_1;
+			}
+		}
+	}
+}

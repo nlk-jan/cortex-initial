@@ -1,0 +1,97 @@
+$color_1: #F5F8FF;
+$font-family_1: 'Roboto Condensed';
+$font-family_2: 'Ubuntu Mono Regular';
+
+.form-main-qa {
+	gap: 10px;
+	margin-bottom: 10px;
+}
+.d-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.w-96 {
+	width: 96%;
+	margin: 0 auto;
+}
+.w-17 {
+	width: 17%;
+	width: 17%;
+}
+.w-48 {
+	width: 48%;
+	width: 48%;
+}
+.w-10 {
+	width: 10%;
+}
+.w-28 {
+	width: 28%;
+}
+.w-98 {
+	width: 98%;
+}
+.form-control-qa {
+	label {
+		display: block;
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: $color_1;
+		width: 100%;
+		margin-bottom: 2px;
+	}
+	input {
+		display: block;
+		width: 100%;
+		font-family: $font-family_2;
+		font-size: 16px;
+		line-height: 16px;
+		color: $color_1;
+		background: #1B4EA3;
+		border: 2px solid #1B4EA3;
+		border-radius: 3px;
+		outline: none;
+		padding: 5px 2px;
+	}
+	textarea {
+		display: block;
+		width: 100%;
+		font-family: $font-family_2;
+		font-size: 16px;
+		line-height: 16px;
+		color: $color_1;
+		background: #1B4EA3;
+		border: 2px solid #1B4EA3;
+		border-radius: 3px;
+		outline: none;
+		padding: 5px 2px;
+	}
+	.log-message-box {
+		display: block;
+		width: 100%;
+		font-family: $font-family_2;
+		font-size: 16px;
+		line-height: 16px;
+		color: $color_1;
+		background: #1B4EA3;
+		border: 2px solid #1B4EA3;
+		border-radius: 3px;
+		outline: none;
+		padding: 5px 2px;
+	}
+}
+.btnImg {
+	display: inline-flex;
+	background: none;
+	outline: none;
+	border: none;
+	align-items: center;
+	cursor: pointer;
+	img {
+		max-width: 35px;
+	}
+}

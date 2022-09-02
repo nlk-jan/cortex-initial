@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../../assets/fonts/roboto-condensed.ttf');
+}
+
+$color_1: #F5F8FF;
+$font-family: 'Roboto Condensed';
+$backgroundcolor_1: #1B4EA3;
+
+.tabBoxMain {
+	.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+		font-size: 10px;
+		color: $color_1;
+	}
+    .tabQa{
+        font-size: 10px;
+		color: $color_1;
+        padding: 5px 3px;
+        min-width: 50px;
+        min-height: 40px;
+        font-family: $font-family;
+        font-size: 14px;
+    }
+    .tabQa.Mui-selected {
+        background: $backgroundcolor_1;
+        color: $color_1;
+    }
+    .css-1ujnqem-MuiTabs-root{
+        min-height: 30px !important;
+    }
+   
+}

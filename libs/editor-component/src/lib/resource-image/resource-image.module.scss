@@ -1,0 +1,55 @@
+$color_1: #F5F8FF;
+$font-family_1: 'Roboto';
+
+.resourcesText-main {
+	display: block;
+	background: #133774;
+	border-radius: 5px;
+	margin: 0 10px 10px;
+	padding: 8px 8px 13px;
+	p {
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: $color_1;
+		margin: 0 0 10px;
+	}
+	.resourceImage {
+		gap: 10px;
+		font-size: 16px;
+		line-height: 19px;
+	}
+	img.resource-icon {
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+	}
+	.resource-product-img {
+		display: block;
+		width: 90%;
+		padding: 10px;
+		height: 300px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+.space-between {
+	display: flex;
+	justify-content: space-between;
+}
+.text-right {
+	text-align: right;
+}
+.align-center {
+	align-items: center;
+}
+.d-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
