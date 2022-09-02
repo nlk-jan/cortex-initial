@@ -215,7 +215,7 @@ function InspectorAttribute() {
                 <Icon>
                   <Image src={manIcon} alt="Setting" />
                 </Icon>
-                <SpanInp>Multiplier Formula Result Unit</SpanInp>
+                <SpanInp>Multiplier Formula Result Uit</SpanInp>
               </InpBox>
               <Select>
                 <option value="0"> Degrees </option>
