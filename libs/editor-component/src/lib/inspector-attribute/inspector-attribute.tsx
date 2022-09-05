@@ -1,30 +1,16 @@
-import React from 'react';
-import TextField from '@mui/material/TextField';
-import { Grid } from '@mui/material';
-// import { styled } from '@mui/material/styles';
-// import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
-import Stack from '@mui/material/Stack';
-// import Autocomplete from '@mui/material/Autocomplete';
-import Autocomplete, { AutocompleteProps } from '@mui/material/Autocomplete';
-// import { Mul }
-import Checkbox from '@mui/material/Checkbox';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Image from 'next/image';
-import styled from 'styled-components';
-
 import manIcon from '../man.png';
 import settingIcon from '../settings.png';
-// import RobotoRegular from '../../assets/fonts/Roboto-Regular.ttf'
+import Comment_Section from './Comment_Section';
+import FormulaTable from './FormulaTable';
+import Input_Inspector from './Input_Inspector';
+import Multiplier_Formula from './Multiplier_Formula';
+import Multiplier_Formula_Result from './Multiplier_Formula_Result';
 import {
   MainWrapper,
   BgColor,
@@ -39,54 +25,15 @@ import {
   SpanInp,
   StdTbl,
   ImgText,
-  ImgTextImg,
   SpanInpTwo,
   MuiTableCell,
   AttrVaribale,
   IdValueUnit,
-  Col12,
   MultiplierInput,
   RowTwo,
-  // AutoCompleteField,
   Select,
+  CommentTextArea,
 } from './styles';
-
-const topFilms = [
-  { title: 'The Shawshank Redemption', year: 1994 },
-  { title: 'The Godfather', year: 1972 },
-  { title: 'The Godfather: Part II', year: 1974 },
-  { title: 'The Dark Knight', year: 2008 },
-  { title: '12 Angry Men', year: 1957 },
-  { title: "Schindler's List", year: 1993 },
-  { title: 'Pulp Fiction', year: 1994 },
-];
-
-export const isString = (item: any): item is string => {
-  return typeof item === 'string';
-};
-
-type AutoCompleteFieldProps<T> = {
-  selectValue: keyof T;
-  options: T[];
-};
-
-// const AutoCompleteField = <T extends {}>({
-//   selectValue,
-//   options,
-// }: AutoCompleteFieldProps<T>): React.ReactElement => {
-//   return (
-//     <Autocomplete<T>
-//       id={name}
-//       options={options}
-//       fullWidth
-//       // Error here
-//       getOptionLabel={(option) =>
-//         isString(option[selectValue]) ? option[selectValue] : ''
-//       }
-//       renderInput={(params) => <TextField {...params} />}
-//     />
-//   );
-// };
 
 function createData(
   s_no: string,
@@ -104,35 +51,6 @@ const rows = [
 ];
 
 function InspectorAttribute() {
-  // @ts-ignore
-  const defaultProps: AutocompleteProps = {
-    options: dropdownOpt,
-    getOptionLabel: (option: { title: String }) => option.title,
-  };
-
-  const flatProps = {
-    options: dropdownOpt.map((option) => option.title),
-  };
-
-  const [value, setValue] = React.useState(null);
-
-  //   let Styles = {
-  //     mainWrapper: {
-  //       maxWidth: '500px',
-  //       marginRight: 'auto',
-  //       marginLeft: 'auto',
-  //     },
-  //     inpectorMainDiv: {
-  //       backgroundColor: '#0C2146',
-  //       padding: '16px 8px',
-  //       color: 'rgb(245, 248, 255)',
-  //       fontSize: '16px',
-  //     },
-  //     MarginTB_0: {
-  //       margin: 0,
-  //     },
-  //   };
-
   return (
     <div>
       <MainWrapper>
@@ -140,25 +58,30 @@ function InspectorAttribute() {
         <Heading3>No Change</Heading3>
         <BgColor>
           <Row>
-            <Col6>
-              <InpBox>
-                <Icon>
-                  <Image src={settingIcon} alt="Setting" />
-                </Icon>
-                <SpanInp>Input Multiplier</SpanInp>
-              </InpBox>
-              <Input type="text" placeholder="Value Unit" />
-              <InpCaption> Inherited from Node FFFFFF </InpCaption>
-            </Col6>
-            <Col6>
-              <InpBox>
-                <Icon>
-                  <Image src={settingIcon} alt="Setting" />
-                </Icon>
-                <SpanInp>Splitting Ratio</SpanInp>
-              </InpBox>
-              <Input type="text" placeholder="Ratio" />
-            </Col6>
+            <Input_Inspector
+              Col6={Col6}
+              InpBox={InpBox}
+              Icon={Icon}
+              settingIcon={settingIcon}
+              SpanInp={SpanInp}
+              Input={Input}
+              InpCaption={InpCaption}
+              InpText="Input Multiplier"
+              placeHolder="Value Unit"
+              downSpanText="Inherited from Node FFFFFF"
+            />
+            <Input_Inspector
+              Col6={Col6}
+              InpBox={InpBox}
+              Icon={Icon}
+              settingIcon={settingIcon}
+              SpanInp={SpanInp}
+              Input={Input}
+              InpCaption={InpCaption}
+              downSpanText=""
+              InpText="Splitting Ratio"
+              placeHolder="Ratio"
+            />
           </Row>
           <StdTbl>
             <ImgText>
@@ -167,75 +90,102 @@ function InspectorAttribute() {
             </ImgText>
             <TableContainer>
               <Table aria-label="simple table">
-                <TableHead>
-                  <TableRow>
-                    <MuiTableCell>Attribute ID</MuiTableCell>
-                    <MuiTableCell>Attribute Variable</MuiTableCell>
-                    <MuiTableCell>Attribute Value</MuiTableCell>
-                    <MuiTableCell>Attribute Unit</MuiTableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows.map((row: any) => (
-                    <TableRow key={row.name}>
-                      <IdValueUnit>{row.s_no}</IdValueUnit>
-                      <AttrVaribale>{row.att_variable}</AttrVaribale>
-                      <IdValueUnit>{row.att_value}</IdValueUnit>
-                      <IdValueUnit>{row.att_unit}</IdValueUnit>
-                    </TableRow>
-                  ))}
-                </TableBody>
+                <FormulaTable
+                  TableHead={TableHead}
+                  rows={rows}
+                  TableRow={TableRow}
+                  MuiTableCell={MuiTableCell}
+                  TableBody={TableBody}
+                  IdValueUnit={IdValueUnit}
+                  AttrVaribale={AttrVaribale}
+                />
               </Table>
             </TableContainer>
           </StdTbl>
-          <Row>
-            <ImgText>
-              <Icon>
-                <Image src={manIcon} alt="Setting" />
-              </Icon>
-              <SpanInp>Multiplier Formula</SpanInp>
-            </ImgText>
-          </Row>
-
-          <MultiplierInput type="text" placeholder="Formula" />
-          <InpCaption>Multiplier Transformation Formula</InpCaption>
+          <Multiplier_Formula
+            Row={Row}
+            ImgText={ImgText}
+            Icon={Icon}
+            src={manIcon}
+            SpanInp={SpanInp}
+            MultiplierInput={MultiplierInput}
+            InpCaption={InpCaption}
+            topText="Multiplier Formula"
+            placeHolder="Formula"
+            bottomText="Multiplier Transformation Formula"
+          />
           <RowTwo>
-            <Col6>
-              <ImgText>
-                <Icon>
-                  <Image src={settingIcon} alt="Setting" />
-                </Icon>
-                <SpanInp>Multiplier Formula Result</SpanInp>
-              </ImgText>
-              <Input type="text" placeholder="ResMult" />
-              <InpCaption> Result Of Formula Above </InpCaption>
-            </Col6>
-            <Col6>
-              <InpBox>
-                <Icon>
-                  <Image src={manIcon} alt="Setting" />
-                </Icon>
-                <SpanInp>Multiplier Formula Result Uit</SpanInp>
-              </InpBox>
-              <Select>
-                <option value="0"> Degrees </option>
-                <option value="1"> Degrees </option>
-              </Select>
-              {/* <AutoComplete /> */}
-              {/* <AutoCompleteField<{ title: string; year: number }>
-                options={topFilms}
-                selectValue="title"
-              /> */}
-              {/* <Input type="text" placeholder="Formula Unit" /> */}
-              <InpCaption>Select A Unit From List</InpCaption>
-            </Col6>
+            <Input_Inspector
+              Col6={Col6}
+              InpBox={InpBox}
+              Icon={Icon}
+              settingIcon={settingIcon}
+              SpanInp={SpanInp}
+              Input={Input}
+              InpCaption={InpCaption}
+              InpText="Multiplier Formula Result"
+              downSpanText="Result of Formula above"
+            />
+            <Multiplier_Formula_Result
+              Col6={Col6}
+              InpBox={InpBox}
+              Icon={Icon}
+              SpanInp={SpanInp}
+              Select={Select}
+              InpCaption={InpCaption}
+              image={manIcon}
+              InpText="Multiplier Formula Result Unit"
+              downSpanText="Select A Unit From List"
+            />
           </RowTwo>
+          <RowTwo>
+            <Input_Inspector
+              Col6={Col6}
+              InpBox={InpBox}
+              Icon={Icon}
+              settingIcon={settingIcon}
+              SpanInp={SpanInp}
+              Input={Input}
+              InpCaption={InpCaption}
+              InpText="User Multiplier Value"
+              downSpanText="Overrides all other values"
+            />
+            <Multiplier_Formula_Result
+              Col6={Col6}
+              InpBox={InpBox}
+              Icon={Icon}
+              SpanInp={SpanInp}
+              Select={Select}
+              InpCaption={InpCaption}
+              image={manIcon}
+              InpText="User Multiplier Unit"
+              downSpanText="Select A Unit From List"
+            />
+          </RowTwo>
+          <Multiplier_Formula
+            Row={Row}
+            ImgText={ImgText}
+            Icon={Icon}
+            src={settingIcon}
+            SpanInp={SpanInp}
+            MultiplierInput={MultiplierInput}
+            InpCaption={InpCaption}
+            topText="Output Multiplier"
+            placeHolder="Output Value Output Unit"
+            bottomText="Value transformed by above forumula and variables"
+          />
+          <Comment_Section
+            Row={Row}
+            ImgText={ImgText}
+            Icon={Icon}
+            src={manIcon}
+            SpanInp={SpanInp}
+            CommentTextArea={CommentTextArea}
+          />
         </BgColor>
       </MainWrapper>
     </div>
   );
 }
-
-const dropdownOpt = [{ title: 'Degrees ' }, { title: 'Degrees' }];
 
 export default InspectorAttribute;

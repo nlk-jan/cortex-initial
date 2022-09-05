@@ -1,47 +1,4 @@
-// import styled from 'styled-components';
 import styled from '@emotion/styled';
-// let Styles = {
-//   //   heading: {
-//   //     maxWidth: 500,
-//   //     marginRight: 'auto',
-//   //     marginLeft: 'auto',
-//   //   },
-//   //   designBox: {
-//   //     backgroundColor: 'var(--bgcolor)',
-//   //     padding: '16px 8px',
-//   //     position: 'relative',
-//   //   },
-//   //   stdForm: {
-//   //     color: ' #F5F8FF',
-//   //     fontSize: '16px',
-//   //     confirmOverRide: {
-//   //       paddingTtop: '0px',
-//   //       marginBottom: '5px',
-//   //     },
-//   //   },
-//   //   img_text: {
-//   //     display: 'flex',
-//   //     color: '#76A9FF',
-//   //     alignItems: 'center',
-//   //     justifyContent: 'flex-start',
-//   //     fontSize: '14px',
-//   //     marginBottom: '2px',
-//   //     img: {
-//   //       paddingRight: '8px',
-//   //     },
-//   //   },
-//   //   imgFluid: {
-//   //     maxWidth: 'fit-content',
-//   //     width: '100%',
-//   //     height: 'auto',
-//   //   },
-//   //   grayClr: {
-//   //     label: {
-//   //       color: '#282828',
-//   //     },
-//   //   },
-// };
-// export default Styles;
 
 export const MainWrapper = styled.div`
   max-width: 500px;
@@ -65,6 +22,7 @@ export const BgColor = styled.div`
   font-size: 16px;
 `;
 export const Row = styled.div`
+  margin-top: 10px;
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
@@ -138,10 +96,6 @@ export const SpanInpTwo = styled.span`
   margin-left: 8px;
 `;
 
-// export const TableCont = styled.table`
-//   color: #828282;
-// `;
-
 export const MuiTableCell = styled.td`
   color: #76a9ff;
   font-size: 16px;
@@ -192,7 +146,6 @@ export const Select = styled.select`
   outline: none;
   border-bottom: 1px solid #76a9ff;
   width: 100%;
-
   option {
     color: black;
     background: white;
@@ -201,4 +154,17 @@ export const Select = styled.select`
     min-height: 20px;
     padding: 0px 2px 1px;
   }
+`;
+
+export const CommentTextArea = styled.textarea`
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  resize: none;
+  background: transparent;
+  border-bottom: 1px solid #76a9ff !important;
+  color: #76a9ff;
+  border-bottom: 2px solid var(--textcolor);
+  min-height: 140px;
+  outline: none;
 `;
