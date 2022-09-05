@@ -6,29 +6,29 @@ import TableRow from '@mui/material/TableRow';
 import Image from 'next/image';
 import manIcon from '../man.png';
 import settingIcon from '../settings.png';
-import Comment_Section from './Comment_Section';
+import CommentSection from './Comment_Section';
 import FormulaTable from './FormulaTable';
-import Input_Inspector from './Input_Inspector';
-import Multiplier_Formula from './Multiplier_Formula';
-import Multiplier_Formula_Result from './Multiplier_Formula_Result';
+import InputInspector from './Input_Inspector';
+import MultiplierFormula from './Multiplier_Formula';
+import MultiplierFormulaResult from './Multiplier_Formula_Result';
 import {
   MainWrapper,
   BgColor,
-  Col6,
-  Heading2,
-  Heading3,
+  Col_6,
+  MainHeading,
+  SubHeading,
   Icon,
-  InpBox,
-  InpCaption,
+  InputBox,
+  InputMessage,
   Input,
   Row,
-  SpanInp,
-  StdTbl,
+  InputTitle,
+  StdTable,
   ImgText,
-  SpanInpTwo,
+  ImageTitle,
   MuiTableCell,
-  AttrVaribale,
-  IdValueUnit,
+  TdAttribute,
+  TableDataCell,
   MultiplierInput,
   RowTwo,
   Select,
@@ -54,39 +54,39 @@ function InspectorAttribute() {
   return (
     <div>
       <MainWrapper>
-        <Heading2>Inspector - Attributes - Multiplier</Heading2>
-        <Heading3>No Change</Heading3>
+        <MainHeading>Inspector - Attributes - Multiplier</MainHeading>
+        <SubHeading>No Change</SubHeading>
         <BgColor>
           <Row>
-            <Input_Inspector
-              Col6={Col6}
-              InpBox={InpBox}
+            <InputInspector
+              Col_6={Col_6}
+              InputBox={InputBox}
               Icon={Icon}
               settingIcon={settingIcon}
-              SpanInp={SpanInp}
+              InputTitle={InputTitle}
               Input={Input}
-              InpCaption={InpCaption}
-              InpText="Input Multiplier"
+              InputMessage={InputMessage}
+              InputText="Input Multiplier"
               placeHolder="Value Unit"
-              downSpanText="Inherited from Node FFFFFF"
+              inputCaption="Inherited from Node FFFFFF"
             />
-            <Input_Inspector
-              Col6={Col6}
-              InpBox={InpBox}
+            <InputInspector
+              Col_6={Col_6}
+              InputBox={InputBox}
               Icon={Icon}
               settingIcon={settingIcon}
-              SpanInp={SpanInp}
+              InputTitle={InputTitle}
               Input={Input}
-              InpCaption={InpCaption}
-              downSpanText=""
-              InpText="Splitting Ratio"
+              InputMessage={InputMessage}
+              inputCaption=""
+              InputText="Splitting Ratio"
               placeHolder="Ratio"
             />
           </Row>
-          <StdTbl>
+          <StdTable>
             <ImgText>
               <Image src={settingIcon} alt="Setting" />
-              <SpanInpTwo>Multiplier Formula Variables</SpanInpTwo>
+              <ImageTitle>Multiplier Formula Variables</ImageTitle>
             </ImgText>
             <TableContainer>
               <Table aria-label="simple table">
@@ -96,90 +96,90 @@ function InspectorAttribute() {
                   TableRow={TableRow}
                   MuiTableCell={MuiTableCell}
                   TableBody={TableBody}
-                  IdValueUnit={IdValueUnit}
-                  AttrVaribale={AttrVaribale}
+                  TableDataCell={TableDataCell}
+                  TdAttribute={TdAttribute}
                 />
               </Table>
             </TableContainer>
-          </StdTbl>
-          <Multiplier_Formula
+          </StdTable>
+          <MultiplierFormula
             Row={Row}
             ImgText={ImgText}
             Icon={Icon}
             src={manIcon}
-            SpanInp={SpanInp}
+            InputTitle={InputTitle}
             MultiplierInput={MultiplierInput}
-            InpCaption={InpCaption}
-            topText="Multiplier Formula"
+            InputMessage={InputMessage}
+            label="Multiplier Formula"
             placeHolder="Formula"
-            bottomText="Multiplier Transformation Formula"
+            inputCaption="Multiplier Transformation Formula"
           />
-          <RowTwo>
-            <Input_Inspector
-              Col6={Col6}
-              InpBox={InpBox}
+          <Row>
+            <InputInspector
+              Col_6={Col_6}
+              InputBox={InputBox}
               Icon={Icon}
               settingIcon={settingIcon}
-              SpanInp={SpanInp}
+              InputTitle={InputTitle}
               Input={Input}
-              InpCaption={InpCaption}
-              InpText="Multiplier Formula Result"
-              downSpanText="Result of Formula above"
+              InputMessage={InputMessage}
+              InputText="Multiplier Formula Result"
+              inputCaption="Result of Formula above"
             />
-            <Multiplier_Formula_Result
-              Col6={Col6}
-              InpBox={InpBox}
+            <MultiplierFormulaResult
+              Col_6={Col_6}
+              InputBox={InputBox}
               Icon={Icon}
-              SpanInp={SpanInp}
+              InputTitle={InputTitle}
               Select={Select}
-              InpCaption={InpCaption}
+              InputMessage={InputMessage}
               image={manIcon}
-              InpText="Multiplier Formula Result Unit"
-              downSpanText="Select A Unit From List"
+              InputText="Multiplier Formula Result Unit"
+              inputCaption="Select A Unit From List"
             />
-          </RowTwo>
-          <RowTwo>
-            <Input_Inspector
-              Col6={Col6}
-              InpBox={InpBox}
+          </Row>
+          <Row>
+            <InputInspector
+              Col_6={Col_6}
+              InputBox={InputBox}
               Icon={Icon}
               settingIcon={settingIcon}
-              SpanInp={SpanInp}
+              InputTitle={InputTitle}
               Input={Input}
-              InpCaption={InpCaption}
-              InpText="User Multiplier Value"
-              downSpanText="Overrides all other values"
+              InputMessage={InputMessage}
+              InputText="User Multiplier Value"
+              inputCaption="Overrides all other values"
             />
-            <Multiplier_Formula_Result
-              Col6={Col6}
-              InpBox={InpBox}
+            <MultiplierFormulaResult
+              Col_6={Col_6}
+              InputBox={InputBox}
               Icon={Icon}
-              SpanInp={SpanInp}
+              InputTitle={InputTitle}
               Select={Select}
-              InpCaption={InpCaption}
+              InputMessage={InputMessage}
               image={manIcon}
-              InpText="User Multiplier Unit"
-              downSpanText="Select A Unit From List"
+              InputText="User Multiplier Unit"
+              inputCaption="Select A Unit From List"
             />
-          </RowTwo>
-          <Multiplier_Formula
+          </Row>
+          <MultiplierFormula
             Row={Row}
             ImgText={ImgText}
             Icon={Icon}
             src={settingIcon}
-            SpanInp={SpanInp}
+            InputTitle={InputTitle}
             MultiplierInput={MultiplierInput}
-            InpCaption={InpCaption}
-            topText="Output Multiplier"
+            InputMessage={InputMessage}
+            label="Output Multiplier"
             placeHolder="Output Value Output Unit"
-            bottomText="Value transformed by above forumula and variables"
+            inputCaption="Value transformed by above forumula and variables"
           />
-          <Comment_Section
+          <CommentSection
             Row={Row}
             ImgText={ImgText}
             Icon={Icon}
             src={manIcon}
-            SpanInp={SpanInp}
+            InputTitle={InputTitle}
             CommentTextArea={CommentTextArea}
           />
         </BgColor>

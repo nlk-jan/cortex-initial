@@ -1,31 +1,31 @@
 import Image from 'next/image';
 
-const Input_Inspector = ({
-  Col6,
-  InpBox,
+const InputInspector = ({
+  Col_6,
+  InputBox,
   Icon,
   settingIcon,
-  SpanInp,
+  InputTitle,
   Input,
-  InpCaption,
-  InpText,
+  InputMessage,
+  InputText,
   placeHolder,
-  downSpanText,
+  inputCaption,
 }: any) => {
   return (
     <>
-      <Col6>
-        <InpBox>
+      <Col_6>
+        <InputBox>
           <Icon>
             <Image src={settingIcon} alt="Setting" />
           </Icon>
-          <SpanInp>{InpText}</SpanInp>
-        </InpBox>
+          <InputTitle>{InputText}</InputTitle>
+        </InputBox>
         <Input type="text" placeholder={placeHolder} />
-        <InpCaption>{downSpanText} </InpCaption>
-      </Col6>
+        <InputMessage>{inputCaption} </InputMessage>
+      </Col_6>
     </>
   );
 };
 
-export default Input_Inspector;
+export default InputInspector;

@@ -1,14 +1,4 @@
 import styles from './index.module.scss';
-import { InputSelect, InputText } from '@node-editor/form';
-import {
-  NodeAttrCommon,
-  NodeAttrDiff,
-  NodeAttributeTabContent,
-  NodeDetail,
-  NodeName,
-  NodePropertiesTabs,
-  RelationshipsSearch,
-} from '@node-editor/editor-component';
 import InspectorAttribute from 'libs/editor-component/src/lib/inspector-attribute/inspector-attribute';
 
 export function Index() {

@@ -4,8 +4,8 @@ const FormulaTable = ({
   MuiTableCell,
   TableBody,
   rows,
-  IdValueUnit,
-  AttrVaribale,
+  TableDataCell,
+  TdAttribute,
 }: any) => {
   let Array = [
     {
@@ -32,10 +32,10 @@ const FormulaTable = ({
       <TableBody>
         {rows.map((row: any) => (
           <TableRow key={row.name}>
-            <IdValueUnit>{row.s_no}</IdValueUnit>
-            <AttrVaribale>{row.att_variable}</AttrVaribale>
-            <IdValueUnit>{row.att_value}</IdValueUnit>
-            <IdValueUnit>{row.att_unit}</IdValueUnit>
+            <TableDataCell>{row.s_no}</TableDataCell>
+            <TdAttribute>{row.att_variable}</TdAttribute>
+            <TableDataCell>{row.att_value}</TableDataCell>
+            <TableDataCell>{row.att_unit}</TableDataCell>
           </TableRow>
         ))}
       </TableBody>

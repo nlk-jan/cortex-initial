@@ -11,16 +11,12 @@ export interface ItemDescriptionProps {
 export function ItemDescription(props: ItemDescriptionProps) {
   return (
     <div className={styles['itemDescroption-main']}>
-      <p className={styles['itemHeading']} > {props.itemName} </p>
-      <p>
-        {props.itemDescp}
-      </p>
-      <div className={styles['itemImg']} >
-        <img src={props.itemImg} alt='' />
+      <p className={styles['itemHeading']}> {props.itemName} </p>
+      <p>{props.itemDescp}</p>
+      <div className={styles['itemImg']}>
+        <img src={props.itemImg} alt="" />
       </div>
-      <p className={styles['img-caption']} >
-        {props.imgCaption}
-      </p>
+      <p className={styles['img-caption']}>{props.imgCaption}</p>
     </div>
   );
 }

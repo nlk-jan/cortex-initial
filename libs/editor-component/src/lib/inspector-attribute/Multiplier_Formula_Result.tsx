@@ -1,35 +1,34 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Multiplier_Formula_Result = ({
-  Col6,
-  InpBox,
+const MultiplierFormulaResult = ({
+  Col_6,
+  InputBox,
   image,
   Icon,
-  SpanInp,
+  InputTitle,
   Select,
-  InpCaption,
-  InpText,
-  downSpanText,
+  InputMessage,
+  InputText,
+  inputCaption,
 }: any) => {
   return (
     <>
-      <Col6>
-        <InpBox>
+      <Col_6>
+        <InputBox>
           <Icon>
             <Image src={image} alt="Setting" />
           </Icon>
-          <SpanInp>{InpText}</SpanInp>
-        </InpBox>
+          <InputTitle>{InputText}</InputTitle>
+        </InputBox>
         <Select>
-          <option value="0"> </option>
+          <option value="0"> Degrees </option>
           <option value="1"> Degrees </option>
-          <option value="2"> Degrees </option>
         </Select>
-        <InpCaption>{downSpanText}</InpCaption>
-      </Col6>
+        <InputMessage>{inputCaption}</InputMessage>
+      </Col_6>
     </>
   );
 };
 
-export default Multiplier_Formula_Result;
+export default MultiplierFormulaResult;

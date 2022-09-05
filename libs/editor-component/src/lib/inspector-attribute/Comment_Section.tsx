@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-const Comment_Section = ({
+const CommentSection = ({
   Row,
   ImgText,
   Icon,
   src,
-  SpanInp,
+  InputTitle,
   CommentTextArea,
 }: any) => {
   return (
@@ -15,7 +15,7 @@ const Comment_Section = ({
           <Icon>
             <Image src={src} alt="Setting" />
           </Icon>
-          <SpanInp>Comment</SpanInp>
+          <InputTitle>Comment</InputTitle>
         </ImgText>
       </Row>
       <CommentTextArea />
@@ -23,4 +23,4 @@ const Comment_Section = ({
   );
 };
 
-export default Comment_Section;
+export default CommentSection;

@@ -5,11 +5,11 @@ export const MainWrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
 `;
-export const Heading2 = styled.h2`
+export const MainHeading = styled.h2`
   font-size: 1.5em;
   color: #000;
 `;
-export const Heading3 = styled.h3`
+export const SubHeading = styled.h3`
   font-size: 1.17em;
   color: #000;
   margin: 0;
@@ -27,7 +27,7 @@ export const Row = styled.div`
   flex-flow: wrap;
   justify-content: space-between;
 `;
-export const Col6 = styled.div`
+export const Col_6 = styled.div`
   max-width: 48%;
   flex: 0 0 48%;
 `;
@@ -35,13 +35,13 @@ export const Col12 = styled.input`
   max-width: 100%;
   flex: 0 0 100%;
 `;
-export const InpBox = styled.div`
+export const InputBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 5px;
 `;
-export const SpanInp = styled.span`
+export const InputTitle = styled.span`
   color: rgb(118, 169, 255);
   font-size: 14px;
 `;
@@ -62,7 +62,7 @@ export const Input = styled.input`
     color: #f5f8ff;
   }
 `;
-export const InpCaption = styled.p`
+export const InputMessage = styled.p`
   font-size: 12px;
   padding: 0px;
   margin: 0;
@@ -74,7 +74,7 @@ export const InpCaption = styled.p`
   top: -4px;
 `;
 
-export const StdTbl = styled.div`
+export const StdTable = styled.div`
   padding: 15px 0;
 `;
 
@@ -91,7 +91,7 @@ export const ImgTextImg = styled.img`
   padding-right: 8px;
 `;
 
-export const SpanInpTwo = styled.span`
+export const ImageTitle = styled.span`
   padding-right: 8px;
   margin-left: 8px;
 `;
@@ -105,11 +105,11 @@ export const MuiTableCell = styled.td`
   font-weight: 400;
 `;
 
-export const AttrVaribale = styled.td`
+export const TdAttribute = styled.td`
   border-bottom: 1px solid #76a9ff;
 `;
 
-export const IdValueUnit = styled.td`
+export const TableDataCell = styled.td`
   color: #828282;
   font-size: 16px;
   border-bottom: 0;

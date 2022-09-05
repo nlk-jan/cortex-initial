@@ -1,6 +1,6 @@
 import styles from './relationships-search.module.scss';
 
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from '@mui/Icons-material/Search';
 import { IconButton, InputBase, Paper } from '@mui/material';
 
 /* eslint-disable-next-line */

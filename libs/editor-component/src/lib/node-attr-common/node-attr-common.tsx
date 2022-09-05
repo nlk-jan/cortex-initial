@@ -3,7 +3,7 @@ import styles from './node-attr-common.module.scss';
 import { Grid } from '@mui/material';
 import { Box, Container } from '@mui/system';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faPlus } from '@fortawesome/free-solid-svg-icons'
+// import { faPlus } from '@fortawesome/free-solid-svg-Icons'
 
 /* eslint-disable-next-line */
 export interface NodeAttrCommonProps {

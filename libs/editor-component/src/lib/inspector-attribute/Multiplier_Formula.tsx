@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
-const Multiplier_Formula = ({
+const MultiplierFormula = ({
   Row,
   ImgText,
   Icon,
-  SpanInp,
+  InputTitle,
   MultiplierInput,
-  InpCaption,
-  topText,
+  InputMessage,
+  label,
   placeHolder,
-  bottomText,
+  inputCaption,
   src,
 }: any) => {
   return (
@@ -19,13 +19,13 @@ const Multiplier_Formula = ({
           <Icon>
             <Image src={src} alt="Setting" />
           </Icon>
-          <SpanInp>{topText}</SpanInp>
+          <InputTitle>{label}</InputTitle>
         </ImgText>
       </Row>
       <MultiplierInput type="text" placeholder={placeHolder} />
-      <InpCaption>{bottomText}</InpCaption>
+      <InputMessage>{inputCaption}</InputMessage>
     </>
   );
 };
 
-export default Multiplier_Formula;
+export default MultiplierFormula;

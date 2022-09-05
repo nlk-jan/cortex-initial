@@ -3,7 +3,7 @@ import styles from './node-attr-diff.module.scss';
 import { Grid } from '@mui/material';
 import { Box, Container } from '@mui/system';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-Icons';
 
 import Image from 'next/image';
 
@@ -119,7 +119,7 @@ export function NodeAttrDiff(props: NodeAttrDiffProps) {
                   <li className={styles['addNewAttr']}>
                     <span>
                       {' '}
-                      <FontAwesomeIcon icon={faPlus} />{' '}
+                      <FontAwesomeIcon Icon={faPlus} />{' '}
                     </span>
                     <span>Add A New Attribute or Formula to GraphNode</span>
                   </li>

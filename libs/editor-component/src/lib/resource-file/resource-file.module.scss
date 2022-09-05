@@ -1,45 +1,45 @@
-$color_1: #F5F8FF;
+$color_1: #f5f8ff;
 $font-family_1: 'Roboto';
 
 .resourcesText-main {
-	display: block;
-	background: #133774;
-	border-radius: 5px;
-	margin: 0 10px 10px;
-	padding: 8px 8px 13px;
-	p {
-		font-family: $font-family_1;
-		font-style: normal;
-		font-weight: 400;
-		font-size: 12px;
-		line-height: 14px;
-		color: $color_1;
-		margin: 0 0 10px;
-	}
-	.resourceFile {
-		font-size: 16px;
-		line-height: 19px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 5px;
-		margin: 0;
-		input[type="file"] {
-			display: inline-block;
-			width: 0;
-			height: 0;
-		}
-	}
-	img.resource-icon {
-		display: inline-block;
-		width: 25px;
-		height: 25px;
-	}
+  display: block;
+  background: #133774;
+  border-radius: 5px;
+  margin: 0 10px 10px;
+  padding: 8px 8px 13px;
+  p {
+    font-family: $font-family_1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color_1;
+    margin: 0 0 10px;
+  }
+  .resourceFile {
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    input[type='file'] {
+      display: inline-block;
+      width: 0;
+      height: 0;
+    }
+  }
+  img.resource-Icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+  }
 }
 .space-between {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .text-right {
-	text-align: right;
+  text-align: right;
 }
