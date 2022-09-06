@@ -1,24 +1,23 @@
 import Image from 'next/image';
-
-const CommentSection = ({
-  Row,
-  ImgText,
-  Icon,
-  src,
-  InputTitle,
+import {
   CommentTextArea,
-}: any) => {
+  Icon,
+  InputBox,
+  InputMessage,
+  InputTitle,
+} from './styles';
+
+const CommentSection = ({ icon, title, placeHolder, helperText }: any) => {
   return (
     <>
-      <Row>
-        <ImgText>
-          <Icon>
-            <Image src={src} alt="Setting" />
-          </Icon>
-          <InputTitle>Comment</InputTitle>
-        </ImgText>
-      </Row>
-      <CommentTextArea />
+      <InputBox>
+        <Icon>
+          <Image src={icon} />
+        </Icon>
+        <InputTitle>{title}</InputTitle>
+      </InputBox>
+      <CommentTextArea placeholder={placeHolder} />
+      <InputMessage>{helperText}</InputMessage>
     </>
   );
 };

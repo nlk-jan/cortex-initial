@@ -31,7 +31,7 @@ export const Col_6 = styled.div`
   max-width: 48%;
   flex: 0 0 48%;
 `;
-export const Col12 = styled.input`
+export const Col12 = styled.div`
   max-width: 100%;
   flex: 0 0 100%;
 `;
@@ -58,6 +58,7 @@ export const Input = styled.input`
   border: none;
   outline: none;
   border-bottom: 1px solid #76a9ff;
+  width: 100%;
   ::placeholder {
     color: #f5f8ff;
   }

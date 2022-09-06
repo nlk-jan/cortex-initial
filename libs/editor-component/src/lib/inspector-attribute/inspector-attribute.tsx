@@ -8,31 +8,22 @@ import manIcon from '../man.png';
 import settingIcon from '../settings.png';
 import CommentSection from './Comment_Section';
 import FormulaTable from './FormulaTable';
-import InputInspector from './Input_Inspector';
-import MultiplierFormula from './Multiplier_Formula';
-import MultiplierFormulaResult from './Multiplier_Formula_Result';
+import InputText from './Input';
+import SelectBox from './Select';
 import {
   MainWrapper,
   BgColor,
   Col_6,
   MainHeading,
   SubHeading,
-  Icon,
-  InputBox,
-  InputMessage,
-  Input,
   Row,
-  InputTitle,
   StdTable,
   ImgText,
   ImageTitle,
   MuiTableCell,
   TdAttribute,
   TableDataCell,
-  MultiplierInput,
-  RowTwo,
-  Select,
-  CommentTextArea,
+  Col12,
 } from './styles';
 
 function createData(
@@ -58,30 +49,22 @@ function InspectorAttribute() {
         <SubHeading>No Change</SubHeading>
         <BgColor>
           <Row>
-            <InputInspector
-              Col_6={Col_6}
-              InputBox={InputBox}
-              Icon={Icon}
-              settingIcon={settingIcon}
-              InputTitle={InputTitle}
-              Input={Input}
-              InputMessage={InputMessage}
-              InputText="Input Multiplier"
-              placeHolder="Value Unit"
-              inputCaption="Inherited from Node FFFFFF"
-            />
-            <InputInspector
-              Col_6={Col_6}
-              InputBox={InputBox}
-              Icon={Icon}
-              settingIcon={settingIcon}
-              InputTitle={InputTitle}
-              Input={Input}
-              InputMessage={InputMessage}
-              inputCaption=""
-              InputText="Splitting Ratio"
-              placeHolder="Ratio"
-            />
+            <Col_6>
+              <InputText
+                icon={settingIcon}
+                title="Input Multiplier"
+                placeHolder="Value Unit"
+                helperText="Inherited from Node FFFFFF"
+              />
+            </Col_6>
+            <Col_6>
+              <InputText
+                icon={settingIcon}
+                title="Splitting Ratio"
+                placeHolder="Ratio"
+                helperText=""
+              />
+            </Col_6>
           </Row>
           <StdTable>
             <ImgText>
@@ -102,86 +85,76 @@ function InspectorAttribute() {
               </Table>
             </TableContainer>
           </StdTable>
-          <MultiplierFormula
-            Row={Row}
-            ImgText={ImgText}
-            Icon={Icon}
-            src={manIcon}
-            InputTitle={InputTitle}
-            MultiplierInput={MultiplierInput}
-            InputMessage={InputMessage}
-            label="Multiplier Formula"
-            placeHolder="Formula"
-            inputCaption="Multiplier Transformation Formula"
-          />
           <Row>
-            <InputInspector
-              Col_6={Col_6}
-              InputBox={InputBox}
-              Icon={Icon}
-              settingIcon={settingIcon}
-              InputTitle={InputTitle}
-              Input={Input}
-              InputMessage={InputMessage}
-              InputText="Multiplier Formula Result"
-              inputCaption="Result of Formula above"
-            />
-            <MultiplierFormulaResult
-              Col_6={Col_6}
-              InputBox={InputBox}
-              Icon={Icon}
-              InputTitle={InputTitle}
-              Select={Select}
-              InputMessage={InputMessage}
-              image={manIcon}
-              InputText="Multiplier Formula Result Unit"
-              inputCaption="Select A Unit From List"
-            />
+            <Col12>
+              <InputText
+                icon={manIcon}
+                title="Multiplier Formula"
+                placeHolder="Formula"
+                helperText="Multiplier Transformation Formula"
+              />
+            </Col12>
           </Row>
           <Row>
-            <InputInspector
-              Col_6={Col_6}
-              InputBox={InputBox}
-              Icon={Icon}
-              settingIcon={settingIcon}
-              InputTitle={InputTitle}
-              Input={Input}
-              InputMessage={InputMessage}
-              InputText="User Multiplier Value"
-              inputCaption="Overrides all other values"
-            />
-            <MultiplierFormulaResult
-              Col_6={Col_6}
-              InputBox={InputBox}
-              Icon={Icon}
-              InputTitle={InputTitle}
-              Select={Select}
-              InputMessage={InputMessage}
-              image={manIcon}
-              InputText="User Multiplier Unit"
-              inputCaption="Select A Unit From List"
-            />
+            <Col_6>
+              <InputText
+                icon={settingIcon}
+                title="Multiplier Formula Result"
+                placeHolder=""
+                helperText="Result of Formula above"
+              />
+            </Col_6>
+            <Col_6>
+              <SelectBox
+                icon={manIcon}
+                title="Multiplier Formula Result Unit"
+                helperText="Select a Unit from List"
+              >
+                <option value="0"> Degrees </option>
+                <option value="1"> Degrees </option>
+              </SelectBox>
+            </Col_6>
           </Row>
-          <MultiplierFormula
-            Row={Row}
-            ImgText={ImgText}
-            Icon={Icon}
-            src={settingIcon}
-            InputTitle={InputTitle}
-            MultiplierInput={MultiplierInput}
-            InputMessage={InputMessage}
-            label="Output Multiplier"
-            placeHolder="Output Value Output Unit"
-            inputCaption="Value transformed by above forumula and variables"
-          />
-          <CommentSection
-            Row={Row}
-            ImgText={ImgText}
-            Icon={Icon}
-            src={manIcon}
-            InputTitle={InputTitle}
-            CommentTextArea={CommentTextArea}
-          />
+          <Row>
+            <Col_6>
+              <InputText
+                icon={settingIcon}
+                title="User Multiplier Value"
+                placeHolder=""
+                helperText="Overrides all other values"
+              />
+            </Col_6>
+            <Col_6>
+              <SelectBox
+                icon={manIcon}
+                title="User Multiplier Unit"
+                helperText="Select a Unit from List"
+              >
+                <option value="0"> Degrees </option>
+                <option value="1"> Degrees </option>
+              </SelectBox>
+            </Col_6>
+          </Row>
+          <Row>
+            <Col12>
+              <InputText
+                icon={settingIcon}
+                title="Output Multiplier"
+                placeHolder="Output Value Output Unit"
+                helperText="Value transformed by above forumula and variables"
+              />
+            </Col12>
+          </Row>
+          <Row>
+            <Col12>
+              <CommentSection
+                icon={manIcon}
+                title="Comment"
+                placeHolder=""
+                helperText=""
+              />
+            </Col12>
+          </Row>
         </BgColor>
       </MainWrapper>
     </div>
