@@ -1,24 +1,44 @@
 import React from 'react';
-import { Icon } from '../atoms/Input';
+import { Icon as InputIcon } from '../atoms/Input';
 import { InputTitle } from '../atoms/Input';
 import { InputBox } from '../atoms/Input';
 import Image from 'next/image';
 import { InputMessage } from '../atoms/Input';
-import { Input } from '../atoms/Input';
+import { Input as InputText } from '../atoms/Input';
+import { Composition } from 'atomic-layout';
 
-const InputText = ({ icon, title, placeHolder, helperText }: any) => {
+const areasMobile = `
+  icon
+  title
+  input
+  helper
+`;
+
+const InputField = ({ icon, title, placeHolder, helperText }: any) => {
   return (
-    <>
-      <InputBox>
-        <Icon>
-          <Image src={icon} />
-        </Icon>
-        <InputTitle>{title}</InputTitle>
-      </InputBox>
-      <Input type="text" placeholder={placeHolder} />
-      <InputMessage>{helperText}</InputMessage>
-    </>
+    <Composition areas={areasMobile}>
+      {({ Icon, Title, Input, Helper }) => (
+        <>
+          <InputBox>
+            <Icon>
+              <InputIcon>
+                <Image src={icon} />
+              </InputIcon>
+            </Icon>
+            <Title>
+              <InputTitle>{title}</InputTitle>
+            </Title>
+          </InputBox>
+          <Input>
+            <InputText type="text" placeholder={placeHolder} />
+          </Input>
+          <Helper>
+            <InputMessage>{helperText}</InputMessage>
+          </Helper>
+        </>
+      )}
+    </Composition>
   );
 };
 
-export default InputText;
+export default InputField;
