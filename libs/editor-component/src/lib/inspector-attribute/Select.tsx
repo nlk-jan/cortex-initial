@@ -17,7 +17,7 @@ const areasMobile = `
 const SelectBox = ({ icon, title, helperText, children }: any) => {
   return (
     <Composition areas={areasMobile}>
-      {({ SelectIcon, SelectTitle, SelectValue, SelectHelper }) => (
+      {({ SelectIcon, SelectTitle, SelectAtom, SelectHelper }) => (
         <>
           <InputBox>
             <SelectIcon>
@@ -29,9 +29,9 @@ const SelectBox = ({ icon, title, helperText, children }: any) => {
               <InputTitle>{title}</InputTitle>
             </SelectTitle>
           </InputBox>
-          <SelectValue>
+          <SelectAtom>
             <Select>{children}</Select>
-          </SelectValue>
+          </SelectAtom>
           <SelectHelper>
             <InputMessage>{helperText}</InputMessage>
           </SelectHelper>
