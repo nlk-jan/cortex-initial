@@ -1,7 +1,10 @@
 import React from 'react';
-import { Icon, InputBox, InputMessage, Select } from './styles';
+import { Icon } from '../atoms/Input';
+import { Select } from '../atoms/Select';
+import { InputBox } from '../atoms/Input';
+import { InputMessage } from '../atoms/Input';
 import Image from 'next/image';
-import { InputTitle } from './styles';
+import { InputTitle } from '../atoms/Input';
 
 const SelectBox = ({ icon, title, helperText, children }: any) => {
   return (

@@ -1,9 +1,12 @@
 import React from 'react';
-import { Icon, InputBox, InputMessage, InputTitle } from './styles';
+import { Icon } from '../atoms/Input';
+import { InputTitle } from '../atoms/Input';
+import { InputBox } from '../atoms/Input';
 import Image from 'next/image';
-import { Input } from './styles';
+import { InputMessage } from '../atoms/Input';
+import { Input } from '../atoms/Input';
 
-const InputText = ({ icon, title, placeHolder, helperText, type }: any) => {
+const InputText = ({ icon, title, placeHolder, helperText }: any) => {
   return (
     <>
       <InputBox>

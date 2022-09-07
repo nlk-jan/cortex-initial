@@ -10,20 +10,21 @@ import CommentSection from './Comment_Section';
 import FormulaTable from './FormulaTable';
 import InputText from './Input';
 import SelectBox from './Select';
+
 import {
   MainWrapper,
-  BgColor,
   Col_6,
+  Col12,
+  Row,
   MainHeading,
   SubHeading,
-  Row,
   StdTable,
   ImgText,
   ImageTitle,
   MuiTableCell,
   TdAttribute,
   TableDataCell,
-  Col12,
+  BgColor,
 } from './styles';
 
 function createData(

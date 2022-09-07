@@ -1,11 +1,9 @@
 import Image from 'next/image';
-import {
-  CommentTextArea,
-  Icon,
-  InputBox,
-  InputMessage,
-  InputTitle,
-} from './styles';
+import { Icon } from '../atoms/Input';
+import { InputTitle } from '../atoms/Input';
+import { InputBox } from '../atoms/Input';
+import { CommentTextArea } from '../atoms/CommentTextArea';
+import { InputMessage } from '../atoms/Input';
 
 const CommentSection = ({ icon, title, placeHolder, helperText }: any) => {
   return (
