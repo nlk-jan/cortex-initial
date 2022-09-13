@@ -1,13 +1,14 @@
 import styles from './filter-btns.module.scss';
 
 import { Button, Stack, Avatar } from '@mui/material';
+import { RealFilterButtons } from './style';
 
 /* eslint-disable-next-line */
 export interface FilterBtnsProps {}
 
 export function FilterBtns(props: FilterBtnsProps) {
   return (
-    <div className={styles['relFilterBtn']}>
+    <RealFilterButtons>
       <Stack
         direction="row"
         spacing={2}
@@ -35,7 +36,7 @@ export function FilterBtns(props: FilterBtnsProps) {
           Reset
         </Button>
       </Stack>
-    </div>
+    </RealFilterButtons>
   );
 }
 

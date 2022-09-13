@@ -1,5 +1,17 @@
 import styles from './index.module.scss';
 import InspectorAttribute from 'libs/editor-component/src/lib/inspector-attribute/inspector-attribute';
+import DescriptionMain from 'libs/editor-component/src/lib/description-main/description-main';
+import NodeAttrCommon from '../../../libs/editor-component/src/lib/node-attr-common/node-attr-common';
+import MultiplierEditor from 'libs/editor-component/src/lib/multiplier-editor/MultiplierEditor';
+import FormulaBar from 'libs/editor-component/src/lib/multiplier-editor/FormulaBar';
+import {
+  AddFormula,
+  CommentBox,
+  FilterBtns,
+  ItemDescription,
+  LogMessage,
+  RelationshipsSearch,
+} from '@node-editor/editor-component';
 
 export function Index() {
   /*
@@ -9,15 +21,8 @@ export function Index() {
    */
   return (
     <div className={styles.page}>
-      {/* <ItemDescription itemDescp='Hello World!' itemImg='hsv' itemName='itemName' imgCaption='imgCaption'/>
-      <RelationshipsSearch searchPlaceholder='Search...' /> */}
-
-      {/* <div className={styles['main-wrapper-qa']}>
-        <InspectorAttribute />
-      </div> */}
-      <div>
-        <InspectorAttribute />
-      </div>
+      <MultiplierEditor />
+      {/* <FormulaBar /> */}
     </div>
   );
 }

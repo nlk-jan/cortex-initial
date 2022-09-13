@@ -22,3 +22,5 @@ export * from './lib/item-description/item-description';
 export * from './lib/add-formula/add-formula';
 export * from './lib/node-detail/node-detail';
 export * from './lib/inspector-attribute/inspector-attribute';
+export * from "./lib/comment-box/comment-box"
+export * from "./lib/item-description/item-description"
