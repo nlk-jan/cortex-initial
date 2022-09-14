@@ -8,7 +8,12 @@ import {
   Text,
 } from 'grommet';
 import { SettingsOption } from 'grommet-icons';
+// import styled components... 
 
+// add support for Theming 
+// will be trasferd to Theme
+// color shall come from DesignTokens ~ all colors are named. 
+// to be refactored. 1. Add Theming support, 2. Add Design tokens  3. separate Mock data/setup MSW 4. Add JEST test  5. Add Stories for Storybook. 6. Add documentation in MDX
 const AttributeVarTable = () => {
   const border = {
     color: '#76a9ff',
@@ -21,6 +26,8 @@ const AttributeVarTable = () => {
     color: '#828282',
   };
 
+  // mock data ~ should not be here. We are using MSW for all mocking.
+  // JEST test. ...
   const tableData = [
     {
       attrId: '',
